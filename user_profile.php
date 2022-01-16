@@ -186,6 +186,14 @@ require_once 'dbcon.php';
 		</tr>
 
 		<tr>
+			<td style="color:white">BMI</td>
+			<td><?php 
+			$res = (($row1['weight']/$row1['height'])/$row1['height'])*10000;
+			echo round($res,2); ?> kg/m<sup>2</sup></td>
+			
+		</tr>
+
+		<tr>
 			<td style="color:white">Batch Time</td>
 			<td><?php 
 
