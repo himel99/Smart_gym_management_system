@@ -1,8 +1,20 @@
 <?php
 session_start();
 
+define('EMAIL', 'ADMIN@smartgym');
+define('PASSWORD', '123456');
+
 if(isset($_SESSION['email']) || isset($_COOKIE['email']) ){
-	header("Location: Admin.php" );
+	if(($_SESSION['email'] == EMAIL) || ($_COOKIE['email'] == EMAIL))
+	{
+		header("Location: Admin.php");
+
+	}
+	else
+	{
+		header("Location: user_profile.php");
+	}
+	
 }
 
 require_once 'dbcon.php';
@@ -10,8 +22,7 @@ require_once 'dbcon.php';
 
 	if(isset($_POST['login'])){
 
-		define('EMAIL', 'ADMIN@smartgym');
-		define('PASSWORD', '123456');
+		
 
 		$email = $_POST['email'];
 		$password = $_POST['password'];
