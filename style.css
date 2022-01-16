@@ -1,0 +1,42 @@
+body {
+	margin: 0;
+	background: #ddd;
+
+}
+
+
+.login-box {
+	width: 250px;
+	margin: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 1px solid #ccc;
+	padding: 20px;
+	border-radius: 15px;
+	background: #9DCACF;
+	opacity: 0.8;
+}
+
+.login-box input {
+	width: 100%;
+	border: 1px solid #ccc;
+	display: block;
+	margin: 10px 0;
+	padding: 7px;
+	border-radius: 4px; 
+	box-sizing: border-box;
+	background: #f1f1f1;
+}
+
+.login-box input[type = "Submit"] {
+	cursor: pointer;
+	background: #3898db;
+	color: #FFF;
+}
+
+.login-box input[type = "Checkbox"] {
+	width: 10%;
+	float: left;
+}

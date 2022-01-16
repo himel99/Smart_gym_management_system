@@ -1,0 +1,10 @@
+body{
+	font-family: sans-serif;
+}
+.data {
+	border-collapse: collapse;
+}
+.data th, .data td {
+	border: 1px solid #ccc;
+	padding: 5px;
+}
