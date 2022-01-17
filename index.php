@@ -28,7 +28,7 @@ require_once 'dbcon.php';
 		$password = $_POST['password'];
 		$keep = isset($_POST['keep']) ? $_POST['keep'] : NULL;
 
-		print_r($_POST);
+		//print_r($_POST);
 
 
 		if($email == EMAIL && $password == PASSWORD)
@@ -73,14 +73,14 @@ require_once 'dbcon.php';
 	        {
 	        	echo '<script type="text/javascript">alert("Your Login Name or Password is invalid")</script>';
 	       
-	           echo "Your Login Name or Password is invalid";
+	          // echo "Your Login Name or Password is invalid";
 	        }
 
 		}
 		
 		else
 		{
-			echo "Invalid email format";
+			//echo "Invalid email format";
 			echo '<script type="text/javascript">alert("Invalid email format")</script>';
 		}
 

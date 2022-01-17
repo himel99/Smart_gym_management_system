@@ -4,14 +4,14 @@ require_once 'dbcon.php';
 
 if(isset($_GET['edit'])){
 	$id = base64_decode($_GET['edit']);
-	echo $id;
+	//echo $id;
 
 	$result = mysqli_query($con, "SELECT * FROM `users` WHERE `id` = '$id'");
 	$result2 = mysqli_query($con, "SELECT * FROM `user_details` WHERE `user_id` = '$id'");
 	$row = mysqli_fetch_assoc($result);
 	$row2 = mysqli_fetch_assoc($result2);
-	print_r($row);
-	print_r($row2);
+	//print_r($row);
+	//print_r($row2);
 
 }
 
@@ -29,8 +29,8 @@ if(isset($_POST['save_info']))
 	$batch_time = $_POST['batch_time'];
 	$exercise = $_POST['exercise'];
 
-	echo $name;
-	echo $id;
+	//echo $name;
+	//echo $id;
 
 	$file_name = $_FILES['image']['name'];
 	$file_name = explode('.', $file_name);
@@ -51,15 +51,15 @@ if(isset($_POST['save_info']))
 
 	
 
-	print_r($result);
+	//print_r($result);
 
 	$row = mysqli_fetch_assoc($result);	
 	$row2 = mysqli_fetch_assoc($result2);
 		
-	echo '<pre>';
-	print_r($row);
+	//echo '<pre>';
+	//print_r($row);
 
-	echo $row2['age'];
+	//echo $row2['age'];
 	
 
 	if($result3)
@@ -80,7 +80,7 @@ if(isset($_POST['save_info']))
 	}
 
 
-	print_r($_POST);
+	//print_r($_POST);
 
 
 
